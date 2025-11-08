@@ -12,10 +12,23 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "plugins": [
+      "@react-native-google-signin/google-signin"
+    ],
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.example.react-native-practices",
+      "supportsTablet": true,
+      "infoPlist": {
+        "CFBundleURLTypes": [
+          {
+            "CFBundleType": "web",
+            "CFBundleURLSchemes": ["com.googleusercontent.apps.849139667327-qkeoqa2kaguthoe7mfbsgco1ltb7695d"]
+          }
+        ]
+      }
     },
     "android": {
+      "package": "com.example.react-native-practices",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
