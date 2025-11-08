@@ -11,7 +11,7 @@ export default function App() {
 
   const configureGoogleSignIn = async () => {
     GoogleSignin.configure({
-      iosClientId: '849139667327-qkeoqa2kaguthoe7mfbsgco1ltb7695d.apps.googleusercontent.com',
+      iosClientId: process.env.EXPO_PUBLIC_GOOGLE_CLIENT_ID_IOS,  
     });
   };
 

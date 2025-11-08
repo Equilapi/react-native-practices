@@ -1,0 +1,43 @@
+export default {
+  expo: {
+    name: "react-native-practices",
+    slug: "react-native-practices",
+    version: "1.0.0",
+    orientation: "portrait",
+    icon: "./assets/icon.png",
+    userInterfaceStyle: "light",
+    newArchEnabled: true,
+    splash: {
+      image: "./assets/splash-icon.png",
+      resizeMode: "contain",
+      backgroundColor: "#ffffff"
+    },
+    plugins: [
+      "@react-native-google-signin/google-signin"
+    ],
+    ios: {
+      bundleIdentifier: "com.example.react-native-practices",
+      supportsTablet: true,
+      infoPlist: {
+        CFBundleURLTypes: [
+          {
+            CFBundleType: "web",
+            CFBundleURLSchemes: [process.env.EXPO_PUBLIC_GOOGLE_CLIENT_ID_IOS_REVERSE]
+          }
+        ]
+      }
+    },
+    android: {
+      package: "com.example.react-native-practices",
+      adaptiveIcon: {
+        foregroundImage: "./assets/adaptive-icon.png",
+        backgroundColor: "#ffffff"
+      },
+      edgeToEdgeEnabled: true
+    },
+    web: {
+      favicon: "./assets/favicon.png"
+    }
+  }
+};
+
